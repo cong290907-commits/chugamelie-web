@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Liên hệ - Chug Amélie</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="loader" id="loader"><div class="loader-logo">Chug Amélie</div><div class="loader-bar"></div></div>
+<div class="toast-container" id="toastContainer"></div>
+
+<nav class="navbar" id="navbar">
+<div class="logo">Chug Amélie</div>
+<button class="menu-toggle" onclick="toggleMenu()">☰</button>
+<ul class="nav-links" id="navLinks">
+<li><a href="index.html">Trang chủ</a></li>
+<li><a href="gian.html">Giới thiệu</a></li>
+<li><a href="homestay.html">Homestay</a></li>
+<li><a href="khuyen-mai.html">Khuyến mãi</a></li>
+<li><a href="suites.html">Suites</a></li>
+<li><a href="thu-vien.html">Thư viện</a></li>
+<li><a href="danh-gia.html">Đánh giá</a></li>
+<li><a href="lien-he.html" class="active">Liên hệ</a></li>
+</ul>
+<div class="nav-actions">
+<button class="btn-notify" onclick="toggleNotifPanel()">🔔<span class="badge-count" id="notifCount">0</span></button>
+<a href="tel:0325292907" class="btn-book">Đặt phòng</a>
+</div>
+</nav>
+
+<div class="notif-panel" id="notifPanel">
+<div class="notif-header"><h4>🔔 Thông báo</h4><button class="notif-clear" onclick="clearAllNotifs()">Xóa tất cả</button></div>
+<div class="notif-body" id="notifBody"><div class="notif-empty">Chưa có thông báo nào</div></div>
+</div>
+
+<header class="page-header" style="background:linear-gradient(rgba(61,40,23,.75),rgba(61,40,23,.75)),url('images/room-family.jpg') center/cover">
+<h1>Liên hệ với chúng tôi</h1>
+<p>Chug Amélie luôn sẵn sàng đón bạn đến với Tà Xùa.</p>
+<div class="breadcrumb"><a href="index.html">Trang chủ</a> / Liên hệ</div>
+</header>
+
+<section class="contact" id="contact">
+<div class="section-label">Contact</div>
+<h2 class="section-title">Liên hệ với chúng tôi</h2>
+<p class="section-subtitle">Điền form hoặc gọi trực tiếp để đặt phòng.</p>
+
+<div class="contact-grid">
+<div class="contact-info reveal">
+<h3>Thông tin liên hệ</h3>
+<div class="contact-item"><div class="contact-icon">📍</div><div><strong>Địa chỉ</strong><p>Xã Tà Xùa, Huyện Bắc Yên, Tỉnh Sơn La</p></div></div>
+<div class="contact-item"><div class="contact-icon">📞</div><div><strong>Hotline</strong><p><a href="tel:0325292907">0325 292 907</a></p></div></div>
+<div class="contact-item"><div class="contact-icon">✉️</div><div><strong>Email</strong><p><a href="mailto:ChugAmelie@gmail.com">ChugAmelie@gmail.com</a></p></div></div>
+<div class="contact-item"><div class="contact-icon">📘</div><div><strong>Facebook</strong><p><a href="https://www.facebook.com/share/14woQCu6hEi/" target="_blank">Chug Amélie Homestay</a></p></div></div>
+<div class="contact-item"><div class="contact-icon">🕐</div><div><strong>Check-in / Check-out</strong><p>12:00 - 12:00 ngày hôm sau</p></div></div>
+<div class="contact-item"><div class="contact-icon">💳</div><div><strong>Thanh toán</strong><p>Tiền mặt / Chuyển khoản</p></div></div>
+</div>
+
+<form class="contact-form reveal" id="contactForm">
+<h3 style="color:var(--cr);margin-bottom:20px;font-size:1.3rem">📅 Đặt phòng ngay</h3>
+<input type="text" id="cfName" placeholder="Họ và tên *" required>
+<input type="tel" id="cfPhone" placeholder="Số điện thoại *" required>
+<input type="date" id="cfCheckin" required title="Ngày đến">
+<label style="color:#c9b8a3;font-size:.8rem;display:block;margin-bottom:5px">Ngày đến</label>
+<input type="date" id="cfCheckout" required title="Ngày đi">
+<label style="color:#c9b8a3;font-size:.8rem;display:block;margin-bottom:5px">Ngày đi</label>
+<select id="cfRoom">
+<option value="">Chọn hạng phòng</option>
+<option>Standard Cloud Room</option>
+<option>Premium Cloud Suite</option>
+<option>Duet Family Cloud Suite</option>
+</select>
+<textarea rows="3" id="cfNote" placeholder="Lời nhắn (số lượng khách, yêu cầu đặc biệt...)"></textarea>
+<button type="submit">Gửi yêu cầu đặt phòng</button>
+</form>
+</div>
+</section>
+
+<section style="background:var(--bg);padding:60px 5%">
+<div style="max-width:1200px;margin:0 auto">
+<h3 style="text-align:center;font-size:1.8rem;color:var(--wd);margin-bottom:15px">📍 Vị trí trên bản đồ</h3>
+<p style="text-align:center;color:#7a6a55;margin-bottom:30px;font-weight:300">Chug Amélie nằm tại xã Tà Xùa, huyện Bắc Yên, tỉnh Sơn La — cách trung tâm Tà Xùa khoảng 2km.</p>
+<div class="map-container">
+<img src="images/map-taxua.jpg" alt="Bản đồ Tà Xùa" class="map-image" onclick="openMapLightbox()">
+<div class="map-zoom-hint">🔍 Nhấn để phóng to</div>
+</div>
+</div>
+</section>
+
+<footer>
+<div class="footer-logo">Chug Amélie</div>
+<p>© 2026 Chug Amélie Homestay - Tà Xùa, Sơn La. Made with ♥</p>
+</footer>
+
+<div class="map-lightbox" id="mapLightbox" onclick="closeMapLightbox()">
+<div class="close-hint">Nhấn để đóng ✕</div>
+<img src="images/map-taxua.jpg" alt="Bản đồ Tà Xùa">
+</div>
+
+<div class="modal-overlay success-modal" id="successModal">
+<div class="modal">
+<div class="success-icon">✓</div>
+<h3 id="successTitle">Gửi yêu cầu thành công!</h3>
+<p id="successMsg">Cảm ơn bạn đã tin tưởng Chug Amélie.</p>
+<div class="booking-code" id="bookingCode">CA-000000</div>
+<button class="btn-primary" onclick="closeSuccessModal()" style="width:100%;margin-top:15px">Đóng</button>
+</div>
+</div>
+
+<button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+<df-messenger
+  chat-title="ChugAmélie"
+  agent-id="f8dd5975-27b9-46cc-b055-35871166a521"
+  language-code="vi">
+</df-messenger>
+
+<script src="js/script.js"></script>
+</body>
+</html>

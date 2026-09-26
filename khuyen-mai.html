@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Khuyến mãi - Chug Amélie</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="loader" id="loader"><div class="loader-logo">Chug Amélie</div><div class="loader-bar"></div></div>
+<div class="toast-container" id="toastContainer"></div>
+
+<nav class="navbar" id="navbar">
+<div class="logo">Chug Amélie</div>
+<button class="menu-toggle" onclick="toggleMenu()">☰</button>
+<ul class="nav-links" id="navLinks">
+<li><a href="index.html">Trang chủ</a></li>
+<li><a href="gian.html">Giới thiệu</a></li>
+<li><a href="homestay.html">Homestay</a></li>
+<li><a href="khuyen-mai.html" class="active">Khuyến mãi</a></li>
+<li><a href="suites.html">Suites</a></li>
+<li><a href="thu-vien.html">Thư viện</a></li>
+<li><a href="danh-gia.html">Đánh giá</a></li>
+<li><a href="lien-he.html">Liên hệ</a></li>
+</ul>
+<div class="nav-actions">
+<button class="btn-notify" onclick="toggleNotifPanel()">🔔<span class="badge-count" id="notifCount">0</span></button>
+<a href="tel:0325292907" class="btn-book">Đặt phòng</a>
+</div>
+</nav>
+
+<div class="notif-panel" id="notifPanel">
+<div class="notif-header"><h4>🔔 Thông báo</h4><button class="notif-clear" onclick="clearAllNotifs()">Xóa tất cả</button></div>
+<div class="notif-body" id="notifBody"><div class="notif-empty">Chưa có thông báo nào</div></div>
+</div>
+
+<!-- ========== PROMOTIONS ========== -->
+<section class="promotions" id="promotions">
+<div class="promo-ticker">
+<div class="promo-ticker-track">
+<span>🎁 COMBO 2N1Đ chỉ từ 899.000đ/khách — Đã gồm xe Cabin đôi khứ hồi + Phòng Bungalow + Bữa sáng</span>
+<span>☕ Voucher giảm 10-15% Menu đồ uống tại Thào Coffee, Mị Ơi, Đỉnh Gió Cafe</span>
+<span>🍲 Voucher giảm 10% Bữa tối Lẩu/Nướng tại Homestay</span>
+<span>🛵 Ưu đãi 10% Thuê xe máy & Trang phục dân tộc</span>
+<span>🌙 Miễn phí phòng nghỉ tạm đêm đầu tại TT. Bắc Yên</span>
+</div>
+</div>
+
+<div style="padding:80px 5%">
+<div class="section-label">Promotions</div>
+<h2 class="section-title">🎁 Bảng giá & Combo ưu đãi</h2>
+<p class="section-subtitle">Giá phòng lẻ và Combo trọn gói 2N1Đ — Đã bao gồm Xe Cabin đôi khứ hồi + Phòng Bungalow + 01 Bữa sáng.</p>
+
+<!-- ===== BẢNG 1: GIÁ PHÒNG LẺ ===== -->
+<div style="max-width:1300px;margin:0 auto 60px">
+<h3 style="text-align:center;font-size:1.5rem;color:var(--wd);margin-bottom:10px">1. Bảng giá phòng lẻ</h3>
+<p style="text-align:center;color:#7a6a55;font-size:.9rem;font-weight:300;margin-bottom:30px;font-style:italic">
+(Đơn vị: VNĐ / Đêm) — Giá đã bao gồm thuế & phí phục vụ
+</p>
+
+<div style="overflow-x:auto;border-radius:12px;box-shadow:0 15px 40px rgba(61,40,23,.1)">
+<table style="width:100%;border-collapse:collapse;min-width:900px;font-size:.9rem;background:#fff">
+<thead>
+<tr style="background:linear-gradient(135deg,var(--wd),#5a3a20);color:var(--cr)">
+<th style="padding:16px 12px;text-align:left;font-weight:600;font-size:.85rem;text-transform:uppercase;letter-spacing:0.5px">Hạng phòng</th>
+<th style="padding:16px 12px;text-align:center;font-weight:600;font-size:.85rem;text-transform:uppercase;letter-spacing:0.5px">Số lượng</th>
+<th style="padding:16px 12px;text-align:center;font-weight:600;font-size:.85rem;text-transform:uppercase;letter-spacing:0.5px">Sức chứa tiêu chuẩn</th>
+<th style="padding:16px 12px;text-align:center;font-weight:600;font-size:.85rem;text-transform:uppercase;letter-spacing:0.5px">Cấu trúc giường</th>
+<th style="padding:16px 12px;text-align:left;font-weight:600;font-size:.85rem;text-transform:uppercase;letter-spacing:0.5px">Điểm nhấn trải nghiệm & Phòng cách đặc trưng</th>
+<th style="padding:16px 12px;text-align:center;font-weight:600;font-size:.85rem;text-transform:uppercase;letter-spacing:0.5px">Giá ngày thường</th>
+<th style="padding:16px 12px;text-align:center;font-weight:600;font-size:.85rem;text-transform:uppercase;letter-spacing:0.5px">Giá cuối tuần / Mùa mây</th>
+<th style="padding:16px 12px;text-align:center;font-weight:600;font-size:.85rem;text-transform:uppercase;letter-spacing:0.5px">Giá ngày Lễ, Tết</th>
+</tr>
+</thead>
+<tbody>
+<!-- Standard Cloud Room -->
+<tr style="border-bottom:1px solid #e8dcc8">
+<td style="padding:16px 12px;background:#f5efe6;font-weight:600;color:var(--wd)">Standard Cloud Room</td>
+<td style="padding:16px 12px;text-align:center;font-weight:600">05 căn</td>
+<td style="padding:16px 12px;text-align:center">02 Khách</td>
+<td style="padding:16px 12px;text-align:center;font-size:.85rem">01 Giường đôi King</td>
+<td style="padding:16px 12px;color:#5a4a38;font-size:.85rem">Phong cách Korean Cozy, ghế sofa nơ hồng check-in</td>
+<td style="padding:16px 12px;text-align:center;font-weight:600;color:var(--sn)">800.000đ</td>
+<td style="padding:16px 12px;text-align:center;font-weight:600;color:var(--sn)">1.100.000đ</td>
+<td style="padding:16px 12px;text-align:center;font-weight:600;color:var(--sn)">1.300.000đ</td>
+</tr>
+<!-- Premium Cloud Suite -->
+<tr style="border-bottom:1px solid #e8dcc8">
+<td style="padding:16px 12px;background:#fff8ed;font-weight:600;color:var(--gd)">Premium Cloud Suite</td>
+<td style="padding:16px 12px;text-align:center;font-weight:600">06 căn</td>
+<td style="padding:16px 12px;text-align:center">02 Khách</td>
+<td style="padding:16px 12px;text-align:center;font-size:.85rem">01 Giường đôi VIP</td>
+<td style="padding:16px 12px;color:#5a4a38;font-size:.85rem">Bồn tắm nằm Panorama, nệm suối giữ ấm, 2 phong cách Decor</td>
+<td style="padding:16px 12px;text-align:center;font-weight:600;color:var(--sn)">1.300.000đ</td>
+<td style="padding:16px 12px;text-align:center;font-weight:600;color:var(--sn)">1.500.000đ</td>
+<td style="padding:16px 12px;text-align:center;font-weight:600;color:var(--sn)">1.700.000đ</td>
+</tr>
+<!-- Duet Family Cloud Suite -->
+<tr>
+<td style="padding:16px 12px;background:#f0f4ee;font-weight:600;color:var(--gr)">Duet Family Cloud Suite</td>
+<td style="padding:16px 12px;text-align:center;font-weight:600">05 căn</td>
+<td style="padding:16px 12px;text-align:center">04 Khách</td>
+<td style="padding:16px 12px;text-align:center;font-size:.85rem">02 Giường đôi lớn</td>
+<td style="padding:16px 12px;color:#5a4a38;font-size:.85rem">View mây kịch trần, sân hiên Glamping riêng cho nhóm (Warm Luxe Attic & Bohemian Chalet)</td>
+<td style="padding:16px 12px;text-align:center;font-weight:600;color:var(--sn)">1.000.000đ</td>
+<td style="padding:16px 12px;text-align:center;font-weight:600;color:var(--sn)">2.100.000đ</td>
+<td style="padding:16px 12px;text-align:center;font-weight:600;color:var(--sn)">2.400.000đ</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<!-- ===== BẢNG 2: GIÁ COMBO TRỌN GÓI ===== -->
+<div style="max-width:1200px;margin:0 auto 50px">
+<h3 style="text-align:center;font-size:1.5rem;color:var(--wd);margin-bottom:10px">2. Bảng giá Combo trọn gói</h3>
+<p style="text-align:center;color:#7a6a55;font-size:.9rem;font-weight:300;margin-bottom:30px;font-style:italic">
+(Đơn vị: VNĐ / Khách) — Áp dụng cho 01 khách khi đi từ nhóm 02 người trở lên — Đã bao gồm Xe Cabin đôi khứ hồi + Phòng Bungalow 2N1Đ + 01 Bữa sáng
+</p>
+
+<div style="overflow-x:auto;border-radius:12px;box-shadow:0 15px 40px rgba(61,40,23,.1)">
+<table style="width:100%;border-collapse:collapse;min-width:900px;font-size:.9rem;background:#fff">
+<thead>
+<tr style="background:linear-gradient(135deg,#7eb8d4,#5a9bbf);color:#fff">
+<th style="padding:16px 12px;text-align:left;font-weight:600;font-size:.85rem;text-transform:uppercase;letter-spacing:0.5px">Hạng phòng chọn nghỉ</th>
+<th style="padding:16px 12px;text-align:center;font-weight:600;font-size:.85rem;text-transform:uppercase;letter-spacing:0.5px">Ngày thường<br><small style="font-weight:400;font-size:.75rem;opacity:.9">(T2 – T5)</small></th>
+<th style="padding:16px 12px;text-align:center;font-weight:600;font-size:.85rem;text-transform:uppercase;letter-spacing:0.5px">Đêm Thứ 6 &<br>Chủ Nhật</th>
+<th style="padding:16px 12px;text-align:center;font-weight:600;font-size:.85rem;text-transform:uppercase;letter-spacing:0.5px">Đêm Thứ 7</th>
+<th style="padding:16px 12px;text-align:left;font-weight:600;font-size:.85rem;text-transform:uppercase;letter-spacing:0.5px">Chi chú cấu trúc &<br>Sức chứa</th>
+</tr>
+</thead>
+<tbody>
+<tr style="border-bottom:1px solid #e8dcc8">
+<td style="padding:16px 12px;background:#f5efe6;font-weight:600;color:var(--wd)">
+Hạng 1:<br>Standard Cloud Room
+</td>
+<td style="padding:16px 12px;text-align:center;font-weight:600;color:var(--sn)">899.000đ</td>
+<td style="padding:16px 12px;text-align:center;font-weight:600;color:var(--sn)">949.000đ</td>
+<td style="padding:16px 12px;text-align:center;font-weight:600;color:var(--sn)">1.099.000đ</td>
+<td style="padding:16px 12px;color:#5a4a38;font-size:.85rem">
+Áp dụng nhóm 2 khách<br>
+<small style="color:#8a7a68">(1 Cabin đôi + 1 Phòng Standard)</small>
+</td>
+</tr>
+<tr style="border-bottom:1px solid #e8dcc8">
+<td style="padding:16px 12px;background:#fff8ed;font-weight:600;color:var(--gd)">
+Hạng 2:<br>Premium Cloud Suite
+</td>
+<td style="padding:16px 12px;text-align:center;font-weight:600;color:var(--sn)">1.149.000đ</td>
+<td style="padding:16px 12px;text-align:center;font-weight:600;color:var(--sn)">1.249.000đ</td>
+<td style="padding:16px 12px;text-align:center;font-weight:600;color:var(--sn)">1.399.000đ</td>
+<td style="padding:16px 12px;color:#5a4a38;font-size:.85rem">
+Áp dụng nhóm 2 khách<br>
+<small style="color:#8a7a68">(1 Cabin đôi + 1 Phòng Premium)</small>
+</td>
+</tr>
+<tr>
+<td style="padding:16px 12px;background:#f0f4ee;font-weight:600;color:var(--gr)">
+Hạng 3: Duet<br>Family Cloud Suite
+</td>
+<td style="padding:16px 12px;text-align:center;font-weight:600;color:var(--sn)">999.000đ</td>
+<td style="padding:16px 12px;text-align:center;font-weight:600;color:var(--sn)">1.099.000đ</td>
+<td style="padding:16px 12px;text-align:center;font-weight:600;color:var(--sn)">1.249.000đ</td>
+<td style="padding:16px 12px;color:#5a4a38;font-size:.85rem">
+Áp dụng nhóm từ 4 khách<br>
+<small style="color:#8a7a68">(2 Cabin đôi + 1 Phòng Family 2 giường)</small>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<!-- ===== BỘ ĐẶC QUYỀN ===== -->
+<div class="perks-box">
+<h3>👑 Bộ Đặc Quyền Độc Quyền</h3>
+<p class="perks-sub">Dành riêng cho Khách nhà Chug Amélie — Áp dụng cho cả 2 lựa chọn combo</p>
+<div class="perks-grid">
+<div class="perk-item"><div class="perk-icon">☕</div><h4>Voucher 10-15% Menu Đồ uống</h4><p>Áp dụng tại các tiệm cafe đắt giá nhất Đỉnh Gió: Thào Coffee, Mị Ơi, Đỉnh Gió Cafe...</p></div>
+<div class="perk-item"><div class="perk-icon">🍲</div><h4>Voucher 10% Bữa tối Lẩu/Nướng</h4><p>Thưởng thức Lẩu gà đen, Nướng Tây Bắc nóng hổi ngay tại Homestay.</p></div>
+<div class="perk-item"><div class="perk-icon">🛵</div><h4>Ưu đãi 10% Thuê xe & Trang phục</h4><p>Hỗ trợ giao xe máy tận nơi tại homestay, giảm giá thuê trang phục dân tộc check-in.</p></div>
+<div class="perk-item"><div class="perk-icon">🌙</div><h4>Miễn phí Phòng nghỉ tạm đêm đầu</h4><p>Nghỉ ngơi tại nhà xe ở TT. Bắc Yên (từ 1h30 – 5h00 sáng) trước khi di chuyển lên Tà Xùa.</p></div>
+<div class="perk-item"><div class="perk-icon">🧳</div><h4>Miễn phí Gửi đồ sớm</h4><p>Hỗ trợ gửi hành lý tự do tại Lễ tân từ 6h00 sáng để thoải mái đi chơi trước giờ check-in.</p></div>
+</div>
+</div>
+
+<!-- ===== 2 LỰA CHỌN COMBO ===== -->
+<div class="combo-options">
+<h3 style="text-align:center;font-size:1.8rem;color:var(--wd);margin-bottom:15px">3. Lựa chọn Combo</h3>
+<p style="text-align:center;color:#7a6a55;margin-bottom:40px;font-weight:300">Chọn hành trình phù hợp với phong cách của bạn</p>
+
+<!-- Combo 01 -->
+<div class="combo-option reveal">
+<div class="combo-option-header">
+<div class="num">01</div>
+<h3>Combo "RELAX & CHILL"</h3>
+<span class="combo-badge">🌿 NGHỈ DƯỠNG</span>
+</div>
+<p class="combo-desc">Dành cho khách thích đi gần, nghỉ dưỡng nhẹ nhàng, tối ưu bán kính 1-2km quanh Đỉnh Gió. Tối ưu thời gian nghỉ ngơi, bước ra cửa là có ảnh đẹp, không tốn sức di chuyển xe máy đường dài.</p>
+<div class="itinerary">
+<div class="itinerary-day">
+<h5><span class="day-num">NGÀY 0</span> Đêm trước — Khởi hành từ Hà Nội</h5>
+<div class="timeline-item"><div class="timeline-time">22:00</div><div class="timeline-content">Xe Cabin đôi đón tại <strong>THCS Nam Trung Yên (Hà Nội)</strong>. Ngủ đêm trên xe.</div></div>
+<div class="timeline-item"><div class="timeline-time">01:30</div><div class="timeline-content">Nghỉ tại phòng chờ <strong>TT. Bắc Yên</strong>.</div></div>
+</div>
+<div class="itinerary-day">
+<h5><span class="day-num">NGÀY 1</span> Tự do sống ảo quanh Đỉnh Gió</h5>
+<div class="timeline-item"><div class="timeline-time">06:00</div><div class="timeline-content">Xe đưa đến <strong>Chug Amélie</strong>, gửi đồ tại Lễ tân.</div></div>
+<div class="timeline-item"><div class="timeline-time">07:00-08:00</div><div class="timeline-content">Ăn sáng và thưởng thức cafe view mây tại Homestay.</div></div>
+<div class="timeline-item"><div class="timeline-time">08:00-11:30</div><div class="timeline-content"><strong>Cung đường Siêu Gần:</strong> Dùng Voucher giảm 10-15% tại Thào Coffee, Mị Ơi, Đỉnh Gió Cafe. Ghé <strong>Khe Cái</strong> (900m).</div></div>
+<div class="timeline-item"><div class="timeline-time">14:00</div><div class="timeline-content">Nhận phòng Chug Amélie, nghỉ ngơi, tắm bồn ngắm mây.</div></div>
+<div class="timeline-item"><div class="timeline-time">18:30</div><div class="timeline-content">Dùng Voucher giảm 10% thưởng thức <strong>Bữa tối Lẩu gà đen / Nướng</strong>.</div></div>
+</div>
+<div class="itinerary-day">
+<h5><span class="day-num">NGÀY 2</span> Săn mây tại phòng — Mua sắm quà Tà Xùa</h5>
+<div class="timeline-item"><div class="timeline-time">06:30-08:30</div><div class="timeline-content">Mở rèm đón biển mây ngay trên giường ngủ, dùng bữa sáng.</div></div>
+<div class="timeline-item"><div class="timeline-time">09:00-11:00</div><div class="timeline-content">Đi dạo <strong>Bản Bẹ</strong> (7km) ngắm đồi chè Shan Tuyết cổ thụ.</div></div>
+<div class="timeline-item"><div class="timeline-time">12:30</div><div class="timeline-content">Xe Cabin đôi đón tại cổng Homestay đưa về Hà Nội.</div></div>
+</div>
+</div>
+<div style="text-align:center;margin-top:25px">
+<a href="lien-he.html" class="btn-primary">Đặt Combo Relax & Chill</a>
+</div>
+</div>
+
+<!-- Combo 02 -->
+<div class="combo-option reveal">
+<div class="combo-option-header">
+<div class="num">02</div>
+<h3>Combo "DISCOVERY & CHECK-IN HOT TREND"</h3>
+<span class="combo-badge">🏔️ KHÁM PHÁ</span>
+</div>
+<p class="combo-desc">Dành cho các bạn trẻ thích trải nghiệm, chinh phục trọn bộ các điểm check-in xa & nổi tiếng nhất Tà Xùa: Sống Lưng Khủng Long, Cây Cổ Đơn, Mỏm Cá Heo. Săn mây và hoàng hôn góc rộng.</p>
+<div class="itinerary">
+<div class="itinerary-day">
+<h5><span class="day-num">NGÀY 0</span> Đêm trước — Khởi hành từ Hà Nội</h5>
+<div class="timeline-item"><div class="timeline-time">22:00</div><div class="timeline-content">Xuất phát từ Hà Nội đi Tà Xùa.</div></div>
+</div>
+<div class="itinerary-day">
+<h5><span class="day-num">NGÀY 1</span> Cung đường huyền thoại Mỏm Cá Heo — Sống Lưng Khủng Long</h5>
+<div class="timeline-item"><div class="timeline-time">06:00-08:00</div><div class="timeline-content">Xe tới Chug Amélie, gửi đồ, ăn sáng tại quán cafe view mây. <strong>Thuê xe máy (được giảm 10%)</strong>.</div></div>
+<div class="timeline-item"><div class="timeline-time">08:00-12:00</div><div class="timeline-content"><strong>Cung đường Phía Đông Tà Xùa:</strong> Check-in <strong>Mỏm Cá Heo</strong> (15km) và <strong>Cây Cổ Đơn</strong> (16km). Đón gió và ngắm toàn cảnh đồi núi tại <strong>Thảo Nguyên Tà Xùa</strong> (14km).</div></div>
+<div class="timeline-item"><div class="timeline-time">12:30</div><div class="timeline-content">Ăn trưa tại khu vực nhà hàng bản địa.</div></div>
+<div class="timeline-item"><div class="timeline-time">14:00</div><div class="timeline-content">Quay lại Chug Amélie nhận phòng, nghỉ ngơi, chuẩn bị trang phục.</div></div>
+<div class="timeline-item"><div class="timeline-time">15:30-18:00</div><div class="timeline-content">Di chuyển đến <strong>Sống Lưng Khủng Long — Háng Đồng</strong> (12km). Trải nghiệm trekking nhẹ đường sống núi và đón hoàng hôn rực rỡ.</div></div>
+<div class="timeline-item"><div class="timeline-time">18:30</div><div class="timeline-content">Về homestay, dùng Voucher giảm 10% ăn <strong>Lẩu/Nướng Tây Bắc</strong>.</div></div>
+</div>
+<div class="itinerary-day">
+<h5><span class="day-num">NGÀY 2</span> Thỏa sức bắt mây Đỉnh Gió — Cafe check-in — Hà Nội</h5>
+<div class="timeline-item"><div class="timeline-time">06:00-07:30</div><div class="timeline-content">Mở cửa kính phòng ngủ săn biển mây cuồn cuộn, dùng bữa sáng.</div></div>
+<div class="timeline-item"><div class="timeline-time">08:00-11:00</div><div class="timeline-content">Dùng Voucher giảm 10-15% đi bộ sang <strong>Thào Coffee / Mị Ơi</strong> ngay sát homestay để có bộ ảnh sống ảo đắt giá. Ghé check-in thêm <strong>Sống Lạc Đà</strong> (7km).</div></div>
+<div class="timeline-item"><div class="timeline-time">11:30</div><div class="timeline-content">Trở về Chug Amélie dọn dẹp hành lý, Check-out.</div></div>
+<div class="timeline-item"><div class="timeline-time">12:30</div><div class="timeline-content">Xe đón tận nơi đưa về Hà Nội.</div></div>
+</div>
+</div>
+<div style="text-align:center;margin-top:25px">
+<a href="lien-he.html" class="btn-primary">Đặt Combo Discovery</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ========== TRAVEL MAP ========== -->
+<section class="travel-map-section">
+<div class="section-label">Travel Map</div>
+<h2 class="section-title">🗺️ Bản đồ du lịch Tà Xùa</h2>
+<p class="section-subtitle">Khám phá những địa điểm tuyệt đẹp xung quanh Chug Amélie. Nhấn vào bản đồ để xem chi tiết.</p>
+<div class="map-container">
+<img src="images/map-taxua.jpg" alt="Bản đồ du lịch Tà Xùa" class="map-image" onclick="openMapLightbox()">
+<div class="map-zoom-hint">🔍 Nhấn để phóng to</div>
+</div>
+<div class="map-distances">
+<div class="distance-card"><div class="distance-icon">☁️</div><div class="distance-info"><h4>Khe Cái</h4><p>100m từ Đỉnh Gió</p></div></div>
+<div class="distance-card"><div class="distance-icon">🏔️</div><div class="distance-info"><h4>Đỉnh Gió</h4><p>Chug Amélie</p></div></div>
+<div class="distance-card"><div class="distance-icon">🏡</div><div class="distance-info"><h4>Bản Bè</h4><p>5km từ Đỉnh Gió</p></div></div>
+<div class="distance-card"><div class="distance-icon">🪨</div><div class="distance-info"><h4>Sống Lạc Đà</h4><p>5km từ Đỉnh Gió</p></div></div>
+<div class="distance-card"><div class="distance-icon">🐉</div><div class="distance-info"><h4>Sống Lưng Khủng Long</h4><p>10km từ Đỉnh Gió</p></div></div>
+<div class="distance-card"><div class="distance-icon">🌾</div><div class="distance-info"><h4>Thảo Nguyên Tà Xùa</h4><p>12km từ Đỉnh Gió</p></div></div>
+<div class="distance-card"><div class="distance-icon">🐟</div><div class="distance-info"><h4>Mỏm Cá Heo</h4><p>13km từ Đỉnh Gió</p></div></div>
+<div class="distance-card"><div class="distance-icon">🌳</div><div class="distance-info"><h4>Cây Cô Đơn</h4><p>14km từ Đỉnh Gió</p></div></div>
+<div class="distance-card"><div class="distance-icon">🌄</div><div class="distance-info"><h4>Xím Vàng</h4><p>15km từ Đỉnh Gió</p></div></div>
+<div class="distance-card"><div class="distance-icon">🏞️</div><div class="distance-info"><h4>Trạm Tấu</h4><p>50km từ Đỉnh Gió</p></div></div>
+</div>
+</section>
+
+<footer>
+<div class="footer-logo">Chug Amélie</div>
+<p>© 2026 Chug Amélie Homestay - Tà Xùa, Sơn La. Made with ♥</p>
+</footer>
+
+<div class="map-lightbox" id="mapLightbox" onclick="closeMapLightbox()">
+<div class="close-hint">Nhấn để đóng ✕</div>
+<img src="images/map-taxua.jpg" alt="Bản đồ du lịch Tà Xùa">
+</div>
+
+<button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+<df-messenger
+  chat-title="ChugAmélie"
+  agent-id="f8dd5975-27b9-46cc-b055-35871166a521"
+  language-code="vi">
+</df-messenger>
+
+<script src="js/script.js"></script>
+</body>
+</html>
