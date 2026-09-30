@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Signature Suites - Chug Amélie</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="loader" id="loader"><div class="loader-logo">Chug Amélie</div><div class="loader-bar"></div></div>
+<div class="toast-container" id="toastContainer"></div>
+
+<nav class="navbar" id="navbar">
+<div class="logo">Chug Amélie</div>
+<button class="menu-toggle" onclick="toggleMenu()">☰</button>
+<ul class="nav-links" id="navLinks">
+<li><a href="index.html">Trang chủ</a></li>
+<li><a href="gian.html">Giới thiệu</a></li>
+<li><a href="homestay.html">Homestay</a></li>
+<li><a href="khuyen-mai.html">Khuyến mãi</a></li>
+<li><a href="suites.html" class="active">Suites</a></li>
+<li><a href="danh-gia.html">Đánh giá</a></li>
+<li><a href="lien-he.html">Liên hệ</a></li>
+</ul>
+<div class="nav-actions">
+<button class="btn-notify" onclick="toggleNotifPanel()">🔔<span class="badge-count" id="notifCount">0</span></button>
+<a href="tel:0325292907" class="btn-book">Đặt phòng</a>
+</div>
+</nav>
+
+<div class="notif-panel" id="notifPanel">
+<div class="notif-header"><h4>🔔 Thông báo</h4><button class="notif-clear" onclick="clearAllNotifs()">Xóa tất cả</button></div>
+<div class="notif-body" id="notifBody"><div class="notif-empty">Chưa có thông báo nào</div></div>
+</div>
+
+<header class="page-header" style="background:linear-gradient(rgba(61,40,23,.75),rgba(61,40,23,.75)),url('images/room-premium.jpg') center/cover">
+<h1>Signature Suites</h1>
+<p>Bộ sưu tập phòng cao cấp — Dành cho những ai muốn trải nghiệm đỉnh cao của sự sang trọng giữa núi rừng Tà Xùa.</p>
+<div class="breadcrumb"><a href="index.html">Trang chủ</a> / Suites</div>
+</header>
+
+<section class="suites">
+<div class="section-label">Signature Suites</div>
+<h2 class="section-title">Bộ sưu tập phòng cao cấp</h2>
+<p class="section-subtitle">Dành cho những ai muốn trải nghiệm đỉnh cao của sự sang trọng giữa núi rừng Tà Xùa.</p>
+
+<!-- Suite 1: Premium Style 1 -->
+<div class="suite-row reveal">
+<div class="suite-img"><img src="images/room-premium-2.jpg" alt="Premium Style 1"><div class="suite-badge">🌿 STYLE 1</div></div>
+<div class="suite-info">
+<h3>Premium — Mái dốc gác mái Châu âu</h3>
+<div class="suite-price">1.300.000đ <span style="font-size:1rem;color:#8a7a68;font-weight:400">- 1.700.000đ / đêm</span></div>
+<p>Định hình theo phong cách Chalet mộc mạc pha Bohemian, nổi bật với trần ốp gỗ tối màu ấm cúng, riêng tư và mang chiều sâu nghệ thuật.</p>
+<ul class="suite-features">
+<li>✓ Không gian mở kịch trần 2 mặt tiền view mây</li>
+<li>✓ Thảm dệt thổ cẩm Bohemian khổ lớn</li>
+<li>✓ Sàn phòng tắm lát gạch bông hoài cổ</li>
+<li>✓ Bồn tắm nằm view mây</li>
+</ul>
+<button class="btn-primary" onclick="openBookingModal('Premium — Nhà gỗ mộc nghệ thuật')">Đặt ngay</button>
+</div>
+</div>
+
+<!-- Suite 2: Premium Style 2 -->
+<div class="suite-row reverse reveal">
+<div class="suite-img"><img src="images/room-premium.jpg" alt="Premium Style 2"><div class="suite-badge">⭐ STYLE 2</div></div>
+<div class="suite-info">
+<h3>Premium — Nhà gỗ mộc nghệ thuật</h3>
+<div class="suite-price">1.300.000đ <span style="font-size:1rem;color:#8a7a68;font-weight:400">- 1.700.000đ / đêm</span></div>
+<p>Định hình theo phong cách Warm Luxe Rustic với mái vòm dốc ốp gỗ nâu trầm sang trọng, kết hợp hệ đèn chùm Tân cổ điển tỏa ánh sáng ấm áp.</p>
+<ul class="suite-features">
+<li>✓ Tối ưu vách kính kịch trần view mây 270°</li>
+<li>✓ Ban công lưới ngoài trời siêu chill</li>
+<li>✓ Bồn tắm nằm panorama view mây</li>
+<li>✓ Giường King-size VIP, nệm sưởi điện</li>
+</ul>
+<button class="btn-primary" onclick="openBookingModal('Premium — Mái dốc gác mái Châu Âu')">Đặt ngay</button>
+</div>
+</div>
+
+<div class="suite-row reverse reveal">
+<div class="suite-img"><img src="images/room-family.jpg" alt="Duet Family Cloud Suite"><div class="suite-badge">👨‍👩‍👧 FAMILY</div></div>
+<div class="suite-info">
+<h3>Duet Family Cloud Suite</h3>
+<div class="suite-price">1.000.000đ <span style="font-size:1rem;color:#8a7a68;font-weight:400">- 1.400.000đ / đêm</span></div>
+<p>Phòng đôi gia đình với 2 giường đôi lớn trên bục gỗ, sân hiên Glamping riêng, view mây kịch trần — nơi cả gia đình quây quần.</p>
+<ul class="suite-features">
+<li>✓ 02 giường đôi lớn trên bục phân gỗ</li>
+<li>✓ Sân hiên Glamping riêng với ghế xếp dã ngoại</li>
+<li>✓ Vách kính tràn viền góc rộng view thung lũng mây</li>
+<li>✓ Tone trắng - gỗ tự nhiên tối ưu diện tích</li>
+<li>✓ Phòng vệ sinh khép kín đầy đủ tiện nghi</li>
+<li>✓ Sức chứa: 04 người lớn · Tối đa 05 người</li>
+</ul>
+<a href="homestay.html" class="btn-primary">Đặt Family ngay</a>
+</div>
+</div>
+
+<div class="suite-row reveal">
+<div class="suite-img"><img src="images/room-premium-2.jpg" alt="Premium Style 2"><div class="suite-badge">⭐ PREMIUM STYLE 2</div></div>
+<div class="suite-info">
+<h3>Premium Suite — Bohemian Chalet</h3>
+<div class="suite-price">900.000đ <span style="font-size:1rem;color:#8a7a68;font-weight:400">- 1.300.000đ / đêm</span></div>
+<p>Phiên bản Bohemian Chalet của Premium Suite — trần gỗ tối màu ấm cúng, thảm dệt thổ cấm khổ lớn và sàn phòng tắm gạch bông hoài cổ. Mang đến chiều sâu nghệ thuật riêng biệt.</p>
+<ul class="suite-features">
+<li>✓ Không gian mở kịch trần 2 mặt tiền view mây</li>
+<li>✓ Thảm dệt thổ cấm Bohemian khổ lớn</li>
+<li>✓ Sàn phòng tắm gạch bông hoài cổ</li>
+<li>✓ Bồn tắm nằm view mây</li>
+<li>✓ Phong cách Chalet mộc mạc pha Bohemian</li>
+<li>✓ Sức chứa: 02 người lớn · Tối đa 03 người</li>
+</ul>
+<a href="homestay.html" class="btn-primary">Đặt ngay</a>
+</div>
+</div>
+</section>
+
+<section class="cloud-hunting">
+<div class="section-label" style="color:var(--gd)">Cloud Hunting</div>
+<h2>Săn mây tại Chug Amélie</h2>
+<p>Thức dậy sớm, mở cửa sổ và bạn sẽ thấy mình đang lơ lửng trên biển mây bồng bềnh. Đây không phải là giấc mơ — đây là Tà Xùa.</p>
+<a href="homestay.html" class="btn-primary">Đặt phòng săn mây</a>
+</section>
+
+<footer>
+<div class="footer-logo">Chug Amélie</div>
+<p>© 2026 Chug Amélie Homestay - Tà Xùa, Sơn La. Made with ♥</p>
+</footer>
+
+<button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+<df-messenger
+  chat-title="ChugAmélie"
+  agent-id="f8dd5975-27b9-46cc-b055-35871166a521"
+  language-code="vi">
+</df-messenger>
+
+<script src="js/script.js"></script>
+</body>
+</html>
